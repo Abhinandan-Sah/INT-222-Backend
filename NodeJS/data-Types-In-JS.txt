@@ -1,0 +1,5 @@
+var a=16;
+var name = "mamta";
+var value = true;
+var datatype= null;
+
