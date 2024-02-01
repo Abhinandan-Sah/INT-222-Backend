@@ -1,0 +1,15 @@
+{
+  
+  "name": "1-basic-javascript",
+  "version": "1.0.0",
+  "main": "0-loops.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Basic js",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

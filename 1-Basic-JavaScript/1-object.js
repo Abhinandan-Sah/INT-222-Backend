@@ -1,5 +1,6 @@
 const male = {hair: "black", eyes: "brown", complection: "fair", age: 20, weight: 65};
-const female = ["black", "brown"];
+
+const female = ["black", "brown"]; //this is array
 //to access properties of an object by using dot operator
 console.log(male.hair);
 // by using square braces
