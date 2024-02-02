@@ -8,7 +8,7 @@ var fs = require('fs')
 //         console.log("File is successfully unlink");
 //     }
 // })
-fs.writeFile('file.txt', "file is created", (err)=>{
+fs.writeFile('fil.txt', "file is created", (err)=>{
     if(err){
         console.error("error to create file");
     }
@@ -16,4 +16,4 @@ fs.writeFile('file.txt', "file is created", (err)=>{
         console.log("File is successfully unlink");
     }
 
-})
+});

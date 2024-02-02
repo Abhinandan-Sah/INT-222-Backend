@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        /* box-sizing: border-box; */
+      }
+      body {
+        background-image: url(form-bg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        /* color: white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      form h1{
+        text-align: center;
+        /* position: absolute;
+        top: -8; */
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      div {
+        background-color: rgb(245, 245, 245, 0.788);
+        border-radius: 10px;
+        padding: 50px;
+        width: 400px;
+      }
+      input[type="name"],
+      input[type="password"],
+      input[type="text"],
+      input[type="address"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: blanchedalmond;
+        color: white;
+        /* padding: 10px; */
+      }
+      input[type="submit"],
+      input[type="reset"]:hover {
+        background-color: brown;
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      button {
+        display: inline;
+        background-color: #0a156f;
+        /* margin-left: 5px;
+        margin-left: 5px; */
+        padding: 0.3rem 1rem;
+        text-decoration: none;
+        object-fit: cover;
+        border: 1px solid maroon;
+        border-radius: 3px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+      }
+
+      button:hover {
+        background-color: rgb(9, 15, 188);
+        transition-duration: 1ms;
+        transition-timing-function: linear;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="signupForm">
+        <h1>Sign Up</h1>
+        <label for="name">Name</label>
+        <input
+          type="name"
+          placeholder="First name & Last name"
+          id="name"
+        /><br />
+        <label for="password">Password</label>
+        <input type="password" id="Password" /><br />
+        <label for="address">Address</label>
+        <textarea name="text" id="address" cols="25" rows="6"></textarea
+        ><br /><br />
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter your email" id="name" /><br />
+        <label for="cities">Select City</label>
+        <select name="cities" id="cities">
+          <option value="Select">Select</option>
+          <option value="Nodia">NOIDA</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option></select
+        ><br />
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="male" id="" checked />Male
+        <input type="radio" name="gender" value="female" id=" " />Female
+        <input type="radio" name="gender" value="other" id=" " />other <br /><br />
+        <label for="Upload">Upload File:</label>
+        <input type="file" /><br /><br />
+        <button type="button" onclick="submitForm()">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+
+    <div id="displayTable" style="display: none;">
+      <h2>User Details</h2>
+      <table border="1">
+        <tr>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>City</th>
+          <th>Gender</th>
+        </tr>
+        <tbody id="userData"></tbody>
+      </table>
+    </div>
+
+    <script>
+      function submitForm() {
+        // Get form elements
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("Password").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("name").value;
+        var city = document.getElementById("cities").value;
+        var gender = document.querySelector('input[name="gender"]:checked').value;
+
+        // Create a table row with user details
+        var newRow = document.createElement("tr");
+        newRow.innerHTML = `<td>${name}</td>
+                            <td>${password}</td>
+                            <td>${address}</td>
+                            <td>${email}</td>
+                            <td>${city}</td>
+                            <td>${gender}</td>`;
+
+        // Append the new row to the table body
+        var tableBody = document.getElementById("userData");
+        tableBody.appendChild(newRow);
+
+
+        // Show the table
+        document.getElementById("displayTable").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

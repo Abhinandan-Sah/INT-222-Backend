@@ -1,0 +1,2 @@
+create a form in which you have to ask for user details, 
+fetch those details using javaScript and display them in tabular format.
