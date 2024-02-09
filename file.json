@@ -1,0 +1,7 @@
+{
+    "key1": 123,
+    "key2": "mapping",
+    "key3":true,
+    "key4" : {"price":200, "area": 235, "location": "phagwara"}, 
+    "key5": ["INT222", "INT219", {"university":"LPU", "language": "Hindi"}]
+}
