@@ -1,11 +1,4 @@
-var querystring = require('querystring');
-var q = querystring.stringify({year: 2017, month:2});
-console.log(q);
 
-//use also
-// escape
-// unescape
-//stringfy
 // decode
 
 var querystring=require('querystring');
@@ -16,7 +9,7 @@ console.log(q);
 // stringfy
 // decode
 
-var queryescape=require('querystring');
+var queryescape=require('querystring');     
 var q=queryescape.escape({year:2017,month:2});
 console.log(q);
 
