@@ -1,5 +1,4 @@
-const express = require("express");
-const app = express();
+const express = require("express"); const app = express();
 const PORT = 3000;
 app.use(function(req, res, next){
     console.log("Middleware called");
