@@ -9,6 +9,7 @@ async function listDatabases(){
         const db=client.db('grvDB');
         const collection=db.collection('Students_Details');
         await collection.insertOne({name: "AVI", age: 21});
+        await collection.insertOne({name: "Abhinandan", age: 21});
         console.log("document inserted successfully");
     }catch(error){
         console.error("error connecting to MongoDB", error);
