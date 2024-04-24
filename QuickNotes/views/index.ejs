@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>hey</h1>
+    
+    <div class="main w-full min-h-screen bg-zinc-900">
+        <div class="form p-10 text-white">
+            <form action="">
+                <input class="block mt-2 w-full rounded-md outline-none px-5 py-2 bg-zinc-800" type="text" placeholder="Enter Title for notes">
+                <textarea class="block mt-2 w-full rounded-md outline-none px-5 py-2 bg-zinc-800 resize-none" name="textarea" placeholder="Write your task details..."></textarea>
+                <input class="mt-2 bg-blue-600 px-5 py-2 rounded-md" type="submit" value="Create Task">
+            </form>
+        </div>
+
+        <!-- Task Section -->
+        <div class="tasks  p-10 flex flex-wrap gap-3">
+            <% if(files.length > 0){ %>
+                <% files.forEach(function(val) { %>
+                    <div class="task w-72 px-3 py-4 rounded-md bg-zinc-800">
+                        <h1 class="text-white text-3xl trackling-tighter">Some task</h1>
+                        <a class="text-blue-500 mt-3 inline-block" href="">Read me...</a>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                    <h3 class="text-zinc-600">No tasks yet.</h3>
+                <% } %>
+            
+            
+            <h3 class="text-zinc-600">no tasks</h3> 
+        </div>
+    </div>
     
 
     <script src="/js/script.js"></script>
