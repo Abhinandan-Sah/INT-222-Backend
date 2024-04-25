@@ -15,6 +15,10 @@ app.get("/", (req, res) => {
     
 });
 
+app.post("/create", (req, res) => {
+    
+})
+
 // app.get("/profile/:username", function(req, res){
 //     res.send(req.params.username);
 // })
