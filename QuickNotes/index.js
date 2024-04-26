@@ -16,15 +16,18 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-    
-})
+    // console.log(req.body); 
+    fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details, function(err){
+        try{
+            res.redirect("/");
+        }
+        catch(err){
+            console.log(err.getMessage);
+        }
+        
+    });
+});
 
-// app.get("/profile/:username", function(req, res){
-//     res.send(req.params.username);
-// })
-// app.get("/profile/:username/:age", function(req, res){
-//     res.send(`Welcome ${req.params.username}, ${req.params.age}`);
-// })
 
 app.listen(3000, (req, res)=>{
     console.log(`Server is working at port ${3000}`);
