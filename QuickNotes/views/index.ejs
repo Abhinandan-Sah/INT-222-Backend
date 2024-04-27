@@ -24,7 +24,7 @@
                 <% files.forEach(function(val) { %>
                     <div class="task min-w-72 px-3 py-4 rounded-md bg-zinc-800">
                         <h1 class="text-white text-3xl trackling-tighter"><%= val %></h1>
-                        <a class="text-blue-500 mt-3 inline-block" href="">Read me...</a>
+                        <a class="text-blue-500 mt-3 inline-block" href="/file/<%= val %>">Read me...</a>
                     </div>
                 <% }) %>
             <% } else { %>
